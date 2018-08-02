@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ImgurCatsService {
+export class ImgurService {
 
   constructor(private http: HttpClient) { }
 }
