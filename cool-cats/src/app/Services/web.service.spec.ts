@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ImgurCatsService } from './imgur-cats.service';
+import { WebService } from './web.service';
 
-describe('ImgurCatsService', () => {
+describe('WebService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ImgurCatsService]
+      providers: [WebService]
     });
   });
 
-  it('should be created', inject([ImgurCatsService], (service: ImgurCatsService) => {
+  it('should be created', inject([WebService], (service: WebService) => {
     expect(service).toBeTruthy();
   }));
 });
