@@ -20,7 +20,7 @@ export class WebService {
   }
 
   //supply a tag and get a photo url. e.g: 'cat' or 'chair'
-  getPhoto(tag: string) : string {
+  getPhoto(tag: string): Observable<any> {
   
     const authHeader = {
       headers: new HttpHeaders({
@@ -30,20 +30,17 @@ export class WebService {
 
     let imageUrl: string;
 
-  //ToDo: Add typing to Json
-    this.http.get(`https://api.unsplash.com/photos/random?query=${tag}`, authHeader)
+    //Todo: Add typing to Json
+    return this.http.get<any>(`https://api.unsplash.com/photos/random?query=${tag}`, authHeader)
       .pipe(
         retry(3),
-        catchError(this.handleError<any>('getPhoto', 'get')))
-          .subscribe(json => imageUrl = json.urls.regular
-          );
-    
-    return imageUrl;
+        catchError(this.handleError<any>('getPhoto', 'get'))
+      );
   }
 
 
   /**
- *Taken from Angular documentation
+  *Taken from Angular documentation
   * Returns a function that handles Http operation failures.
   * This error handler lets the app continue to run as if no error occurred.
   * @param serviceName = name of the data service that attempted the operation
