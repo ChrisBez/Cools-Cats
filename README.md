@@ -7,7 +7,6 @@ Once cats are done, then I will move on to adding in other animals, starting wil
 
 At this point I am planning to use the Unsplash API to get the images
 
-
 To build this app you will need Node and Angular installed on your PC.
 
-You will also need to register with the unsplah api: https://unsplash.com/documentation#creating-a-developer-account and get a token to download images from them.
+You will also need to register with the unsplash api: https://unsplash.com/documentation#creating-a-developer-account, and add the access token to your own secrets.ts file.
