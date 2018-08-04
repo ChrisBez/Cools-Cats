@@ -18,5 +18,4 @@ export class CatViewerComponent implements OnInit {
         json => this.currentImageUrl = json.urls.regular
       );
   }
-
 }

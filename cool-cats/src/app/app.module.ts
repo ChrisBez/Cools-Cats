@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CatViewerComponent } from './cat-viewer/cat-viewer.component';
+import { WebService } from './Services/web.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { CatViewerComponent } from './cat-viewer/cat-viewer.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

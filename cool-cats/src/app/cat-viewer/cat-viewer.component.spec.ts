@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { CatViewerComponent } from './cat-viewer.component';
 
 describe('CatViewerComponent', () => {
@@ -8,7 +8,12 @@ describe('CatViewerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CatViewerComponent ]
+      declarations: [
+        CatViewerComponent
+      ],
+      imports: [
+        HttpClientModule
+      ],
     })
     .compileComponents();
   }));
@@ -19,5 +24,7 @@ describe('CatViewerComponent', () => {
     fixture.detectChanges();
   });
 
-
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });
