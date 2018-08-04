@@ -12,6 +12,7 @@ import { catchError, retry } from 'rxjs/operators';
 export class WebService {
 
   private mySecrets: any;
+  readonly api_url = `https://api.unsplash.com/photos/random?query=`
 
   constructor(private http: HttpClient) {
 
@@ -28,16 +29,12 @@ export class WebService {
       })
     }
 
-    let imageUrl: string;
-
     //Todo: Add typing to Json
-    return this.http.get<any>(`https://api.unsplash.com/photos/random?query=${tag}`, authHeader)
+    return this.http.get<any>(this.api_url.concat(tag), authHeader)
       .pipe(
-        retry(3),
         catchError(this.handleError<any>('getPhoto', 'get'))
       );
   }
-
 
   /**
   *Taken from Angular documentation
