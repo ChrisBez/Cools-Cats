@@ -13,9 +13,18 @@ export class CatViewerComponent implements OnInit {
   constructor(private web: WebService) { }
 
   ngOnInit() {
+    this.getPhoto();
+  }
+
+  onClick(){
+    this.getPhoto();
+  }
+
+  getPhoto(){
     this.web.getPhoto('cat')
       .subscribe(
         json => this.currentImageUrl = json.urls.regular
-      );
+    );
   }
+
 }
