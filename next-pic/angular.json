@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cool-cats": {
+    "next-pics": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cool-cats",
+            "outputPath": "dist/next-pics",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cool-cats:build"
+            "browserTarget": "next-pics:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cool-cats:build:production"
+              "browserTarget": "next-pics:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cool-cats:build"
+            "browserTarget": "next-pics:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "cool-cats-e2e": {
+    "next-pics-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cool-cats:serve"
+            "devServerTarget": "next-pics:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cool-cats:serve:production"
+              "devServerTarget": "next-pics:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "cool-cats"
+  "defaultProject": "next-pics"
 }
