@@ -32,7 +32,8 @@ export class WebService {
     //Todo: Add typing to Json
     return this.http.get<any>(this.api_url.concat(tag), authHeader)
       .pipe(
-        catchError(this.handleError<any>('getPhoto', 'get'))
+        //return placeholder Url to local asset if API breaks 
+        catchError(this.handleError<any>('getPhoto', 'get', {'urls': { 'regular': '..\\assets\\GoodCat.JPG'}}))
       );
   }
 
