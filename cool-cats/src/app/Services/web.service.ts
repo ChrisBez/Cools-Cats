@@ -12,7 +12,9 @@ import { catchError, retry } from 'rxjs/operators';
 export class WebService {
 
   private mySecrets: any;
-  readonly api_url = `https://api.unsplash.com/photos/random?query=`
+  readonly api_url = `https://api.unsplash.com/photos/random?query=`;
+
+  readonly placeholder = {'urls': { 'regular': '..\\assets\\GoodCat.JPG'}};
 
   constructor(private http: HttpClient) {
 
@@ -33,7 +35,7 @@ export class WebService {
     return this.http.get<any>(this.api_url.concat(tag), authHeader)
       .pipe(
         //return placeholder Url to local asset if API breaks 
-        catchError(this.handleError<any>('getPhoto', 'get', {'urls': { 'regular': '..\\assets\\GoodCat.JPG'}}))
+        catchError(this.handleError<any>('getPhoto', 'get', this.placeholder))
       );
   }
 

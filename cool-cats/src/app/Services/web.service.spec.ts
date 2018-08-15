@@ -75,6 +75,16 @@ describe('WebService', () => {
       req[2].flush(dummyData);
     });
 
-  })
+    it('should return placeholder image Url if error is caught', () => {
 
-});
+      webService.getPhoto(dummyTag).subscribe(json => {
+        expect(json).toEqual(webService.placeholder); 
+      });
+
+      const req = httpMock.expectOne(`${webService.api_url}test`);
+      req.flush({ errorMessage: 'Error here' }, { status: 500, statusText: 'Server Error'} );
+      });
+    });
+
+  });
+
