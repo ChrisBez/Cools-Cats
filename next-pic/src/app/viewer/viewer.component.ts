@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { WebService } from '../Services/web.service';
 
 @Component({
-  selector: 'app-cat-viewer',
-  templateUrl: './cat-viewer.component.html',
-  styleUrls: ['./cat-viewer.component.css']
+  selector: 'app-viewer',
+  templateUrl: './viewer.component.html',
+  styleUrls: ['./viewer.component.css']
 })
-export class CatViewerComponent implements OnInit {
+export class ViewerComponent implements OnInit {
 
   currentImageUrl: string;
 

@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
-import { CatViewerComponent } from './cat-viewer.component';
+import { ViewerComponent } from './viewer.component';
 
 describe('CatViewerComponent', () => {
-  let component: CatViewerComponent;
-  let fixture: ComponentFixture<CatViewerComponent>;
+  let component: ViewerComponent;
+  let fixture: ComponentFixture<ViewerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        CatViewerComponent
+        ViewerComponent
       ],
       imports: [
         HttpClientModule
@@ -19,7 +19,7 @@ describe('CatViewerComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CatViewerComponent);
+    fixture = TestBed.createComponent(ViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
