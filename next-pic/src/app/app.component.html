@@ -1,9 +1,12 @@
-<mat-sidenav-container class="main-container">
-  <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <span>{{ title }}</span>
-    </mat-toolbar>
-    <app-viewer></app-viewer>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="main-container"> 
+  <mat-toolbar color="primary">
+        <span>{{ title }}</span>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav-content>
+     
+      <app-viewer></app-viewer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
