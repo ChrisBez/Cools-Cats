@@ -1,28 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css']
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesComponent {
 
-  selectedCategory: string = 'cat';
+  @Output() updatedCategory: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
   changeCategory(newCategory: string) {
     if (newCategory === null){
       return;
     }
 
-    this.selectedCategory = newCategory;
+    this.updatedCategory.emit(newCategory);
 
-    console.log(this.selectedCategory);
+    console.log(newCategory);
   }
-
 
 }
