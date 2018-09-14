@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatListModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonToggleModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ViewerComponent } from './viewer/viewer.component';
@@ -19,7 +19,7 @@ import { CategoriesComponent } from './categories/categories.component';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule, 
-    MatButtonModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatListModule
+    MatButtonModule, MatCardModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonToggleModule
   ],
   providers: [WebService],
   bootstrap: [AppComponent]

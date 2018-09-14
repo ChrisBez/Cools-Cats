@@ -3,9 +3,10 @@
         <span>{{ title }}</span>
   </mat-toolbar>
   <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+    <mat-sidenav mode="side" opened>
+      <app-categories></app-categories>
+    </mat-sidenav>
     <mat-sidenav-content>
-     
       <app-viewer></app-viewer>
     </mat-sidenav-content>
   </mat-sidenav-container>
