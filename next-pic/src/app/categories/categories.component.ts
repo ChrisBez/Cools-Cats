@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesComponent implements OnInit {
 
+  selectedCategory: string = 'cat';
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  changeCategory(newCategory: string) {
+    if (newCategory === null){
+      return;
+    }
+
+    this.selectedCategory = newCategory;
+
+    console.log(this.selectedCategory);
+  }
+
 
 }
