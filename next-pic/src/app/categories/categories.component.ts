@@ -7,7 +7,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class CategoriesComponent {
 
-  @Output() updatedCategory: EventEmitter<string> = new EventEmitter<string>();
+  @Output() updatedCategory = new EventEmitter<string>();
 
   constructor() { }
 
@@ -17,8 +17,6 @@ export class CategoriesComponent {
     }
 
     this.updatedCategory.emit(newCategory);
-
-    console.log(newCategory);
   }
 
 }

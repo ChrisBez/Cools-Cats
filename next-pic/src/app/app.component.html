@@ -4,7 +4,7 @@
   </mat-toolbar>
   <mat-sidenav-container>
     <mat-sidenav mode="side" opened>
-      <app-categories></app-categories>
+      <app-categories (updatedCategory)="onCategoryChange($event)"></app-categories>
     </mat-sidenav>
     <mat-sidenav-content>
       <app-viewer></app-viewer>

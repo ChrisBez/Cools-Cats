@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Next Pic';
+
+
+  onCategoryChange(newCategory: string) {
+    console.log(newCategory);
+  }
+
 }
