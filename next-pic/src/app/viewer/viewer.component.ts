@@ -10,7 +10,7 @@ export class ViewerComponent implements OnInit {
 
   currentImageUrl: string;
 
-  @Input() category:string; 
+  @Input() category = 'cat'; 
 
   constructor(private web: WebService) { }
 
@@ -23,7 +23,7 @@ export class ViewerComponent implements OnInit {
   }
 
   getPhoto(){
-    this.web.getPhoto('cat')
+    this.web.getPhoto(this.category)
       .subscribe(
         json => this.currentImageUrl = json.urls.regular
     );
