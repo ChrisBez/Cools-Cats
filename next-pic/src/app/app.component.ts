@@ -8,8 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Next Pic';
 
+  category = 'cat';
 
   onCategoryChange(newCategory: string) {
+    if (!newCategory) {
+      this.category = 'cat';
+      return;
+    }
+
+    this.category = newCategory;
     console.log(newCategory);
   }
 

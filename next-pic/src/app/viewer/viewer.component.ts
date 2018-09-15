@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WebService } from '../Services/web.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { WebService } from '../Services/web.service';
 export class ViewerComponent implements OnInit {
 
   currentImageUrl: string;
+
+  @Input() category:string; 
 
   constructor(private web: WebService) { }
 
